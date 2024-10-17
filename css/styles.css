@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --color-fiap: #dc143c;
+    --transition: .5s;
+}
+
+
+ul, ol {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-light);
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--color-fiap);
+}
+
+.container {
+    width: 100%; /*Melhor utilizar porcentagem para maior responsividade*/
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(0,0,0, .8), rgba(0,0,.3)), url(../images/hotel.jpg);/*.. Para sair do folder css (como um cd ..)*/
+    color: var(--color-light);
+    background-repeat: no-repeat; /*Para não criar aquela grade cheia de imagens*/
+    background-size: cover; /*Para que a imagem ocupe todo o espaço*/
+    background-position: 50%; /*Centralizar*/
+    display: flex; /*Responsivo*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.header-page {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+}
+
+.header-menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.hero {
+    text-align: center;
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero h2{
+    font-size: 8vmin; /*Fonte responsiva*/
+}
+
+.hero h3 {
+    font-size: 6vmin;
+}
+
+.btn {
+    border: 2px solid var(--color-fiap);
+    padding: 8px 30px;
+    background-color: var(--color-fiap);
+    border-radius: 70px;
+    transition: background-color var(--transition);
+}
+
+.btn:hover {
+    background-color: transparent;
+}
+
+.cards{
+    width: 90%;
+    min-height: 100vh;
+    background-color: #dc143c;
+    margin: 50px;
+}
