@@ -94,6 +94,56 @@ a:hover {
 .cards{
     width: 90%;
     min-height: 100vh;
-    background-color: #dc143c;
-    margin: 50px;
+    margin: auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cards h2{
+    font-size: 3vw;
+}
+
+.cards-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /*Ao aplicar display: flex, ele tentará fazer com que todos os itens se aloquem ao lado do outro
+    ignorando a largura definida (no caso, card-item width: 45%), para que consertar isto, basta utilizar flex-wrap: wrap*/
+    justify-content: space-evenly; /*Espaçamento nas extremidades e entre aos itens iguais*/
+    row-gap: 60px;
+    margin: 50px 0;
+}
+
+.card-item {
+    width: 37%;
+    display: flex;
+    flex-direction: column; /*Ficou tudo um do lado do outro 
+    pois a direção do flex está em row (linha), coloque em column*/
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 1px 1px 30px #ccc ;
+    padding: 40px 20px;
+    border-radius: 7px;
+    transition: scale var(--transition);
+}
+
+.card-item:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.card-item img{
+    width: 80%;
+    border-radius: 7px;
+}
+
+.card-item p{
+    width: 75%;
+}
+
+/* BÁSICO DO RESPONSIVO */
+@media(width <= 900px){ /*Telas menores ou iguais a 900 pixels*/
+    .card-item {
+        width: 90%; /*Fará com que apenas um card por vez apareça em telas pequenas*/
+    }
 }
